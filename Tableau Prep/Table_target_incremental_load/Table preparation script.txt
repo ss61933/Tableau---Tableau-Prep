@@ -1,0 +1,31 @@
+
+drop table dbo.tableau_prep_input;
+drop table dbo.tableau_prep_target;
+create table tableau_prep_input
+(
+id int,
+in_date datetime,
+department char(10)
+);
+
+truncate table tableau_prep_input;
+
+
+insert into tableau_prep_input(id,in_date,department) values(5,getdate(),'D');
+
+select * from tableau_prep_input;
+
+SELECT CONVERT(VARCHAR(10), CAST(in_date AS TIME), 0)
+from tableau_prep_input;
+
+create table tableau_prep_target
+(
+id int,
+in_date datetime,
+department char(10),
+target_in_date date
+);
+
+drop table tableau_prep_target;
+
+select * from tableau_prep_target;

@@ -1,0 +1,5 @@
+Data provides start and end of the ticket 
+If completion date is null, means ticket is still open
+If completion date id not null , means ticket is closed, we need to fill in in between days for the ticket with completion date as null
+and status as inprgoress
+assume file is received on each day , so you can consider todays date to update null date 
